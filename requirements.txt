@@ -1,0 +1,22 @@
+# Core dependencies for the Gradio app and Whisper/FFmpeg processing
+accelerate==0.24.1
+gradio==5.34.2
+librosa==0.11.0
+numpy==1.26.4
+Pillow==11.0.0
+safetensors==0.5.3
+sentencepiece # Often a dependency for Hugging Face models like Whisper
+soundfile==0.13.1
+torch==2.1.0
+torchaudio==2.1.0
+torchvision==0.16.0
+tqdm==4.67.1
+transformers==4.35.2
+
+# Note on PyTorch versions:
+# For deployment on platforms like Hugging Face Spaces, it's often best to specify
+# the base PyTorch version (e.g., 'torch==2.1.0') without the CUDA suffix '+cu118'.
+# The hosting platform will typically handle the correct CUDA-enabled PyTorch installation
+# for their GPU machines if you select a GPU runtime.
+# If deploying to a CPU-only environment, this base version will default to CPU.
+# The install.sh script already handles the specific CUDA version for local installs.
