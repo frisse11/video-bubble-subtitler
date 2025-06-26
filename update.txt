@@ -1,0 +1,2 @@
+Update
+In stead of Bubbles there are now Words and added sliders for position and height of the words
